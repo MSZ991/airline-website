@@ -1,0 +1,22 @@
+.travelImgs {
+    float: left;
+    /*padding comes with grid framework*/
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 50px;
+}
+div.col-xs-12.jumbotron.mainErea {
+    height: 97px;
+    margin-bottom: 5px;
+}
+div.col-xs-12.destinations{
+    margin-bottom: 20px;
+}
+footer.footerIndex {
+    margin-top: 0;
+}
+@media (min-width: 992px) and (max-width:1332px) {
+    .col-md-3 {
+        min-width: 33%;
+    }
+}

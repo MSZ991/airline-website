@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>Home</title>
+        <!--jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <!--font-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+        <!--local-->
+        <link href="../css/GeneralStyle.css" rel="stylesheet" />
+        <link href="../css/StyleIndex.css" rel="stylesheet" />
+        <link href="../css/ihover.css" rel="stylesheet" />
+
+
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <header>
+                <nav>
+                    <!--navbar-->
+                    <div class="navbar navbar-default">
+                        <div class="navbar-header">
+                            <a class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </a>
+                            <a href="index.html" class="navbar-brand navbar-left">
+                                <img id="menuLogo" src="../pictures/Logo.png" />
+                            </a>
+                        </div>
+                        <div id="menu" class="collapse navbar-collapse navbar-right">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contactUs.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <section>
+                    <!--headline-->
+                    <div class="row main">
+                        <div class="col-xs-12 jumbotron mainErea">
+                            <img src="../pictures/index/slogenNoLogoSmall.png" />
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <!-- Modal for server errors -->
+                    <div id="errorModal" class="modal fade">
+                        <div class="modal-dialog modal-content">
+                            <div class="modal-header">
+                                <input type="button" class="close" data-dismiss="modal" value="&times;" />
+                                <h4 class="modal-title">We're sorry!</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    We're having some difficulties connecting to the weather server.
+                                    <br /> Please note that there might be errors in the page.
+                                    <br /> We're working on it!
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-info" data-dismiss="modal" value="OK" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="col-xs-12 destinations">
+                            <h3><strong>Destinations:</strong></h3>
+                        </div>
+                        <!--image effects start-->
+                        <div class="col-xs-12 col-sm-6 col-md-3 travelImgs">
+                            <div class="ih-item square effect9 bottom_to_top">
+                                <a href="#">
+                                    <div class="img"><img src="../pictures/index/vietnamSize.jpg" alt="img"></div>
+                                    <div class="info">
+                                        <div class="info-back">
+                                            <h3>Vietnam</h3>
+                                            <p id="vietnamTemp"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 travelImgs">
+                            <div class="ih-item square effect9 bottom_to_top">
+                                <a href="#">
+                                    <div class="img"><img src="../pictures/index/thailandSize.jpg" alt="img"></div>
+                                    <div class="info">
+                                        <div class="info-back">
+                                            <h3>Thailand</h3>
+                                            <p id="thailandTemp"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 travelImgs">
+                            <div class="ih-item square effect9 bottom_to_top">
+                                <a href="#">
+                                    <div class="img"><img src="../pictures/index/cambodiaSize.jpg" alt="img"></div>
+                                    <div class="info">
+                                        <div class="info-back">
+                                            <h3>Cambodia</h3>
+                                            <p id="cambodiaTemp"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 travelImgs">
+                            <div class="ih-item square effect9 bottom_to_top">
+                                <a href="#">
+                                    <div class="img"><img src="../pictures/index/laosSize.jpg" alt="img"></div>
+                                    <div class="info">
+                                        <div class="info-back">
+                                            <h3>Laos</h3>
+                                            <p id="laosTemp"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 travelImgs">
+                            <div class="ih-item square effect9 bottom_to_top">
+                                <a href="#">
+                                    <div class="img"><img src="../pictures/index/georgiaSize.jpg" alt="img"></div>
+                                    <div class="info">
+                                        <div class="info-back">
+                                            <h3>Georgia</h3>
+                                            <p id="georgiaTemp"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 travelImgs">
+                            <div class="ih-item square effect9 bottom_to_top">
+                                <a href="#">
+                                    <div class="img"><img src="../pictures/index/creteSize.jpg" alt="img"></div>
+                                    <div class="info">
+                                        <div class="info-back">
+                                            <h3>Greece, Crete</h3>
+                                            <p id="creteTemp"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 travelImgs">
+                            <div class="ih-item square effect9 bottom_to_top">
+                                <a href="#">
+                                    <div class="img"><img src="../pictures/index/antalyaSize.jpg" alt="img"></div>
+                                    <div class="info">
+                                        <div class="info-back">
+                                            <h3>Turkey, Anatalya</h3>
+                                            <p id="anatalyaTemp"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 travelImgs">
+                            <div class="ih-item square effect9 bottom_to_top">
+                                <a href="#">
+                                    <div class="img"><img src="../pictures/index/bulgariaSize.jpg" alt="img"></div>
+                                    <div class="info">
+                                        <div class="info-back">
+                                            <h3>Bulgaria</h3>
+                                            <p id="bulgariaTemp"></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--image effects end-->
+                </section>
+            </main>
+            <footer class="footerIndex">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <p>
+                            <br />
+                            <b>Get in touch with us</b>
+                            <br />
+                            <br />
+                            <b>OvadiaAir company Inc</b>
+                            <br />
+                            <br /> Rotshild st. 120 Tel-Aviv, Israel 1987
+                            <br />
+                            <br /> +972 3 7539782
+                            <br /> customer.service@OvadiaAir.com
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 pages">
+                        <p>
+                            <br />
+                            <b>Pages</b>
+                            <br />
+                            <br />
+                            <a href="index.html">Home</a>
+                            <br />
+                            <a href="contactUs.html">Contact Us</a>
+                            <br />
+                            <a href="about.html">About</a>
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <p>
+                            <br />
+                            <b>Latest destinations</b>
+                            <br />
+                            <br /> Cambodia
+                            <br /> Laos
+                            <br /> Georgia
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <p>
+                            <br />
+                            <b>Cancellation / Refund</b>
+                            <br />
+                            <br /> Cancelation/refund requests for OvadiaAir purchased via our online channels (website or mobile app) can be made on our website up until the departure time of your first flight. Don’t forget that your cancelation/refund request
+                            will be applicable to all passengers included in your reservation.
+                        </p>
+                    </div>
+
+                </div>
+            </footer>
+        </div>
+        <script src="../scripts/index.js"></script>
+    </body>
+</html>

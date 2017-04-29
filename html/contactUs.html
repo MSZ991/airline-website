@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>Contact</title>
+        <!--jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+        <!--jQuery UI Datepicker - Animations-->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <!--font-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+        <!--local-->
+        <link href="../css/GeneralStyle.css" rel="stylesheet" />
+        <link href="../css/StyleContact.css" rel="stylesheet" />
+
+    </head>
+    <body>
+        <div class="container-fluid">
+            <header>
+                <nav>
+                    <!--navbar-->
+                    <div class="navbar navbar-default">
+                        <div class="navbar-header">
+                            <a class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </a>
+                            <a href="index.html" class="navbar-brand navbar-left">
+                                <img id="menuLogo" src="../pictures/Logo.png" />
+                            </a>
+                        </div>
+                        <div id="menu" class="collapse navbar-collapse navbar-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li class="active"><a href="contactUs.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <section>
+                    <!--headline-->
+                    <div class="row main">
+                        <div class="col-xs-12 jumbotron mainErea">
+                            <img class="concactUsIMG" src="../pictures/contact/contact_us.png" />
+                            <img class="messageInAB" src="../pictures/contact/messageInAB.jpg" />
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <!-- Modal for date error -->
+                    <div id="errorDateModal" class="modal fade">
+                        <!--data-backdrop="static"-makes box not going away when clicking on the page-->
+                        <div class="modal-dialog modal-content">
+                            <div class="modal-header">
+                                <input type="button" class="close" data-dismiss="modal" value="&times;" />
+                                <h4 class="modal-title">Pay attention!</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>
+                                    Please make sure to enter a correct flight dete.
+                                    <br /> You probably don't want to order a flight from the past, right?
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-info" data-dismiss="modal" value="OK" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <!--contact form-->
+                    <form action="thanks.html">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6">
+                                <div class="col-xs-12 col-sm-12 col-md-12 formHeader">
+                                    <h4><b>Get in touch with us filling the cotact form below</b></h4>
+                                </div>
+                                <div class="formMain">
+                                    <div class="col-xs-12 col-sm-12 col-md-4">
+                                        <label>Name:</label>
+                                        <br />
+                                        <input type="text" id="name" name="fullName" autofocus required placeholder="* Enter your full name" />
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-4">
+                                        <label>Email:</label>
+                                        <br />
+                                        <input type="email" id="email" name="email" required placeholder="* Enter your email address" />
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-4">
+                                        <label>Flight date:</label>
+                                        <br />
+                                        <input type="text" id="date" name="date" size="30">
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <br />
+                                        <textarea id="message" name="message" required placeholder="* your message here..."></textarea>
+                                    </div>
+                                    <div class="valitateText">
+                                        <p>*Please fill all required form fields, thanks!</p>
+                                    </div>
+                                    <div class="btnSubmitContainer">
+                                        <input type="submit" id="send" class="btn btn-warning btnSubmit" data-dismiss="modal" value="Submit message" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--contact text-->
+                            <div class="col-xs-12 col-sm-12 col-md-6 contactText">
+                                <p>
+                                    <h4><strong>Hello, Is it me you're looking for?</strong></h4>
+                                    <br /> OvadiaAir company Inc
+                                    <br />
+                                    <br /> Rothschild st. 120 Tel-Aviv, Israel 1987
+                                    <br />
+                                    <br /> +972 3 7539782
+                                    <br /> customer.service@OvadiaAir.com
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </main>
+
+            <footer>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <p>
+                            <br />
+                            <b>Get in touch with us</b>
+                            <br />
+                            <br />
+                            <b>OvadiaAir company Inc</b>
+                            <br />
+                            <br /> Rothschild st. 120 Tel-Aviv, Israel 1987
+                            <br />
+                            <br /> +972 3 7539782
+                            <br /> customer.service@OvadiaAir.com
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 pages">
+                        <p>
+                            <br />
+                            <b>Pages</b>
+                            <br />
+                            <br />
+                            <a href="index.html">Home</a>
+                            <br />
+                            <a href="contactUs.html">Contact Us</a>
+                            <br />
+                            <a href="about.html">About</a>
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <p>
+                            <br />
+                            <b>Latest destinations</b>
+                            <br />
+                            <br /> Cambodia
+                            <br /> Laos
+                            <br /> Georgia
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <p>
+                            <br />
+                            <b>Cancellation / Refund</b>
+                            <br />
+                            <br /> Cancellation/refund requests for OvadiaAir purchased via our online channels (website or mobile app) can be made on our website up until the departure time of your first flight. Don’t forget that your cancellation/refund request
+                            will be applicable to all passengers included in your reservation.
+                        </p>
+                    </div>
+
+                </div>
+            </footer>
+
+        </div>
+        <script src="../scripts/contactUs.js"></script>
+    </body>
+
+</html>

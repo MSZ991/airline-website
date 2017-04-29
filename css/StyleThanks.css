@@ -1,0 +1,9 @@
+div.col-xs-12 h3 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+@media (max-width:363px) {
+    div.col-xs-12.jumbotron.mainErea .thanksIMG {
+        width: 92%;
+    }
+}
